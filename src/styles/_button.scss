@@ -1,0 +1,57 @@
+a, button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    height: 48px;
+    cursor: pointer;
+    background-color: $button-color;
+    color: $base-color-2;
+    width: 200px;
+    outline: none;
+    outline-style: none;
+    border: none;
+    box-shadow: none;
+    user-select: none;
+
+    &:hover {
+        color: $base-color-2;
+        background: $button-color-hover;
+        border: none;
+        transition: all .5s;
+    }
+
+    &.false-btn {
+        background-color: $button-color-false;
+        margin-left: 40px;
+
+        &:hover {
+            background: $button-color-hover-false;
+        }
+    }
+
+    &.share-btn {
+        background-color: $button-share;
+    }
+
+    &.play-again-btn {
+        background: none;
+        font-size: 25px;
+
+        &:hover {
+            background: none;
+        }
+    }
+}
+
+a:visited {
+    color: $base-color-2;
+    text-decoration: none;
+}
+
+.cta-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    justify-content: flex-start;
+}
