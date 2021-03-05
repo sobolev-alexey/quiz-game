@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { AppContext } from '../context/globalState';
 import { AppContextInterface } from '../models/context';
 
@@ -20,12 +20,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
 
     return (
-        <React.Fragment>
+        <HelmetProvider>
             <Helmet>
                 <title>{getPageTitle()}</title>
             </Helmet>
             <div className="app-wrapper">{children}</div>
-        </React.Fragment>
+        </HelmetProvider>
     );
 }
 
