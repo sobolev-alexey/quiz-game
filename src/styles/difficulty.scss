@@ -1,0 +1,42 @@
+.difficulty-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 300px;
+    margin: 30px 0;
+
+    .ant-typography {
+        margin: 0;
+    }
+
+    .difficulty {
+        margin-left: 10px;
+        width: 100%;
+        max-width: 250px;
+        height: 16px;
+        position: relative;
+        cursor: pointer;
+    
+        .fill {
+            height: 16px;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 87.93%), linear-gradient(90deg, $difficulty-easy 0%, $difficulty-hard 100%);;
+        }
+        .border {
+            height: 28px;
+            border-right: 4px solid #444444;
+            background-color: transparent;
+            position: absolute;
+            top: -6px;
+            &.easy {
+                width: 20%;
+            }
+            &.medium {
+                width: 50%;
+            }
+            &.hard {
+                width: 95%;
+            }
+        }
+    }
+}

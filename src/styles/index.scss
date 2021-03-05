@@ -1,0 +1,37 @@
+@import './colors';
+@import './variables';
+@import './antd';
+@import './difficulty';
+
+.app-container {
+  height: vh(100);
+
+  &__content {
+    height: calc(100% - #{$header-height});
+  }
+}
+
+body {
+  line-height: 1;
+  // background: url('../assets/background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  min-height: 100vh;
+  background-position: top left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // @media screen and (min-width: ${breakpoints.ipadPort}px) {
+  //   background-size: cover;
+  //   background-position: top center;
+  // }
+
+  .app-wrapper {
+    width: 100%;
+    max-width: 800px;
+  }
+}
