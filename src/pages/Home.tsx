@@ -14,7 +14,8 @@ const Home = () => {
         <Title level={1}>Welcome To The Trivia <span>Challenge!</span></Title>
         <Title level={2}>
           You will be presented with 10 True or False questions.
-          <br />
+        </Title>
+        <Title level={2}>
           Can you score 100%?
         </Title>
         {
