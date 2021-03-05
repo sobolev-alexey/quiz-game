@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Button } from 'antd';
 import { AppContext } from '../context/globalState';
 import { AppContextInterface } from '../models/context';
 
@@ -33,13 +32,12 @@ const CallToAction = ({ text }: { text: string }) => {
     };
 
     return (
-        <Button 
-            type="primary" 
-            shape="round"
+        <button 
+            className={`${text.toLocaleLowerCase()}-btn`}
             onClick={() => nextQuestion()}
         >
             {text}
-        </Button>
+        </button>
     );
 };
 
