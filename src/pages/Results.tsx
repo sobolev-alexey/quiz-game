@@ -22,7 +22,7 @@ const Results = () => {
 
           <Collapsible results={results} />
           <Share score={getFinalResult()} />
-          <NewGame text="Play again?" />
+          <NewGame text="Play again?" className="play-again-btn" />
         </div>
       ) : (
         <NewGame />
