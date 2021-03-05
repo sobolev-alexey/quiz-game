@@ -18,7 +18,7 @@ const Home = () => {
           Can you score 100%?
         </Title>
         {
-          loading ? <Spin /> :  <Link to="/quiz">Begin</Link>
+          loading ? <Spin size="large" /> :  <Link to="/quiz">Begin</Link>
         }
     </Layout>
   );

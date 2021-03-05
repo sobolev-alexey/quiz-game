@@ -13,7 +13,7 @@ const Quiz = () => {
   return (
     <Layout>
       {
-        loading ? <Spin /> : isValidQuestion ? (
+        loading ? <Spin size="large" /> : isValidQuestion ? (
           <div className="question-wrapper">
             <Progress />
             <Question 
