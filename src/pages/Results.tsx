@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/globalState';
-import { Collapsible, Layout, NewGame, Share } from '../components';
+import { Collapsible, Layout, NewGame, Progress, Share } from '../components';
 import { ResultsInterface } from '../models/context';
 
 const Results = () => {
@@ -16,6 +16,7 @@ const Results = () => {
     <Layout>
       {results?.length !== 0 ? (
         <div className="results-wrapper">
+          <Progress />
           <h1>
             You Scored: <span>{getFinalResult()}</span>
           </h1>
