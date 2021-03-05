@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6, p, span {
+    font-family: 'Metropolis', 'Open Sans';
+    color: $base-color;
+    outline: none;
+
+    &.ant-typography {
+        color: $base-color;
+    }
+}
+
+a, button {
+    font-family: 'Metropolis', 'Open Sans';
+    font-weight: 500;
+    font-size: 15px;
+}
