@@ -1,7 +1,10 @@
 {
   "name": "quiz-game",
   "version": "1.0.0",
-  "private": true,
+  "author": {
+    "name": "Alexey Sobolev",
+    "website": "https://lexer.dev"
+  },
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
     "antd": "^4.13.0",
