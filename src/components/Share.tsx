@@ -1,6 +1,11 @@
+import React from 'react';
+import { Typography } from 'antd';
+
+const { Title } = Typography;
+
 const Share = ({ score }: { score: string }) => (
     <div className='share-wrapper'>
-        <h5>Share this score with your friends</h5>
+        <Title level={5}>Share this score with your friends</Title>
         <a 
             target='_blank'
             rel='noopener noreferrer'
