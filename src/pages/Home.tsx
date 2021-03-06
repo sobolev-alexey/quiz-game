@@ -11,16 +11,18 @@ const Home = () => {
   const { loading }: AppContextInterface = useContext(AppContext);
   return (
     <Layout>
-        <Title level={1}>Welcome To The Trivia <span>Challenge!</span></Title>
+        <Title level={1} className="heading">Welcome To The Trivia Challenge!</Title>
         <Title level={2}>
           You will be presented with 10 True or False questions.
         </Title>
         <Title level={2}>
-          Can you score 100%?
+          Can you score 10/10?
         </Title>
-        {
-          loading ? <Spin size="large" /> :  <Link to="/quiz">Begin</Link>
-        }
+        <div className="cta-wrapper">
+          {
+            loading ? <Spin size="large" /> :  <Link to="/quiz">Begin</Link>
+          }
+        </div>
     </Layout>
   );
 };
