@@ -3,12 +3,13 @@ export interface ResultsInterface {
 	answer?: string, 
 	correct?: string,
 	category?: string,
+	isAnsweredCorrectly?: boolean
 };
 
 export interface DataInterface {
 	question: string, 
 	category: string,
-	correct_answer: boolean,
+	correct_answer: string,
 	difficulty: string,
 	type: string
 };

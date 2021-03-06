@@ -24,6 +24,7 @@ const CallToAction = ({ text }: { text: string }) => {
                 answer: text,
                 question: data?.results[currentQuestion]?.question,
                 correct: data?.results[currentQuestion]?.correct_answer,
+                isAnsweredCorrectly: text === data?.results[currentQuestion]?.correct_answer
             },
         ]);
         if (currentQuestion === data?.results.length - 1) {
