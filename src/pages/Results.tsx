@@ -18,7 +18,7 @@ const Results = () => {
         <div className="results-wrapper">
           <Progress />
           <h1>
-            You Scored: <span>{getFinalResult()}</span>
+            You scored: <span>{getFinalResult()}</span>
           </h1>
 
           <Collapsible results={results} />
