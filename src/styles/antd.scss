@@ -9,3 +9,20 @@
 .ant-spin-dot-item {
   background-color: $button-color;
 }
+
+.ant-progress-text {
+  color: $base-color;
+}
+
+.ant-progress-inner {
+  background-color: $base-color;
+}
+
+.ant-progress-bg, 
+.ant-progress-status-success .ant-progress-bg {
+  background-color: $base-color-text;
+}
+
+.ant-progress-status-success .ant-progress-text {
+  color: $base-color-text;
+}
