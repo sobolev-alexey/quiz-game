@@ -22,11 +22,13 @@ const Results = () => {
           </h1>
 
           <Collapsible results={results} />
-          <Share score={getFinalResult()} />
-          <NewGame text="Play again?" className="play-again-btn" />
+          <div className="cta-wrapper">
+            <Share score={getFinalResult()} />
+            <NewGame text="Play again?" className="play-again-btn" />
+          </div>
         </div>
       ) : (
-        <NewGame />
+        <NewGame className="restart" />
       )}
     </Layout>
   );
