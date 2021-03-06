@@ -45,4 +45,11 @@
   .progress-bar {
     margin-bottom: $default-margin;
   }
+
+  .results-wrapper {
+    .collapsible {
+      max-height: 400px;
+      overflow: auto;
+    }
+  }
 }

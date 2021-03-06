@@ -12,7 +12,7 @@ const Collapsible = ({ results }: { results: ResultsInterface[] }) => {
   );
   
   return (
-    <div>
+    <div className="collapsible">
       <Collapse
         bordered={false}
         className="site-collapse-custom-collapse"
