@@ -11,24 +11,20 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
-}
 
-// .question-wrapper, .results-wrapper {
-//   width: 600px;
-// }
+  .question-body {
+    min-height: 230px;
+  }
 
-.question-body {
-  min-height: 230px;
-}
+  .share-wrapper {
+    margin: $default-margin 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
 
-.share-wrapper {
-  margin: $default-margin 0;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
-
-.progress-bar {
-  margin-bottom: $default-margin;
+  .progress-bar {
+    margin-bottom: $default-margin;
+  }
 }
