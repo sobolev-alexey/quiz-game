@@ -20,7 +20,7 @@ const Question = (
             </div>
             <Difficulty difficulty={difficulty} />
             <div className="question-body">
-                <Title level={1}>
+                <Title level={1} className="question">
                     {sanitizeHtml(question)}
                 </Title>
             </div>
