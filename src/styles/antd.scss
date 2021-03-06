@@ -10,19 +10,44 @@
   background-color: $button-color;
 }
 
-.ant-progress-text {
-  color: $base-color;
+.ant-progress {
+  .ant-progress-text {
+    color: $base-color;
+  }
+  
+  .ant-progress-inner {
+    background-color: $base-color;
+  }
+  
+  .ant-progress-bg, 
+  .ant-progress-status-success .ant-progress-bg {
+    background-color: $base-color-text;
+  }
+  
+  .ant-progress-status-success .ant-progress-text {
+    color: $base-color-text;
+  }
 }
 
-.ant-progress-inner {
-  background-color: $base-color;
-}
-
-.ant-progress-bg, 
-.ant-progress-status-success .ant-progress-bg {
-  background-color: $base-color-text;
-}
-
-.ant-progress-status-success .ant-progress-text {
-  color: $base-color-text;
+.ant-collapse {
+  .ant-collapse-header {
+    font-family: 'Metropolis';
+    font-weight: 600;
+    font-size: 16px;
+    
+    .answer-true {
+      color: $color-true;
+    }
+    .answer-false {
+      color: $color-false;
+    }
+  }
+  
+  .ant-collapse-content-box {
+    p {
+      color: $secondary-color;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
 }
