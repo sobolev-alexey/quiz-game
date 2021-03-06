@@ -22,7 +22,7 @@
 }
 
 .share-wrapper {
-  margin: 30px 0;
+  margin: $default-margin 0;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -30,5 +30,5 @@
 }
 
 .progress-bar {
-  margin-bottom: 30px;
+  margin-bottom: $default-margin;
 }

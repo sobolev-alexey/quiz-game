@@ -23,7 +23,7 @@ a, button {
 
     &.false-btn {
         background-color: $button-color-false;
-        margin-left: 40px;
+        margin-left: $default-margin;
 
         &:hover {
             background: $button-color-hover-false;
@@ -54,7 +54,7 @@ a:visited {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: $default-margin;
 }
 
 .results-wrapper {
