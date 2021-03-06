@@ -1,8 +1,16 @@
 .app-wrapper {
   position: relative;
   max-width: 600px;
-  width: 100%;
+  width: 60%;
   min-height: 450px;
+
+  & > .ant-spin-spinning, 
+  & > .restart {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 // .question-wrapper, .results-wrapper {
@@ -11,4 +19,16 @@
 
 .question-body {
   min-height: 230px;
+}
+
+.share-wrapper {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.progress-bar {
+  margin-bottom: 30px;
 }
