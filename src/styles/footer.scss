@@ -1,0 +1,29 @@
+@import '~sass-mq';
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  color: $base-color-text-2;
+
+  a {
+    background-color: unset;
+    height: auto;
+    width: auto;
+    padding: 13px 0 10px 10px;
+    color: $base-color-text-2;
+
+    @include mq($until: mobile) {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+}
