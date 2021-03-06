@@ -13,7 +13,7 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 		try {
 			const onNewGame = async () => {
 				setLoading(true);
-				fetch('https://opentdb.com/api.php?amount=3&type=boolean')
+				fetch('https://opentdb.com/api.php?amount=10&type=boolean')
 				.then((res) => res.json())
 				.then((data) => {
 					setData(data);
