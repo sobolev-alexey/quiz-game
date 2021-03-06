@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { AppContext } from '../context/globalState';
 import { AppContextInterface } from '../models/context';
+import { Footer } from '.';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const { currentQuestion }: AppContextInterface = useContext(AppContext);
@@ -25,6 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <title>{getPageTitle()}</title>
             </Helmet>
             <div className="app-wrapper">{children}</div>
+            <Footer />
         </HelmetProvider>
     );
 }
