@@ -7,6 +7,7 @@
 
     .ant-typography {
         margin: 0;
+        color: $base-color;
     }
 
     .difficulty {
@@ -24,7 +25,7 @@
         }
         .border {
             height: 28px;
-            border-right: 4px solid #444444;
+            border-right: 4px solid $base-color;
             background-color: transparent;
             position: absolute;
             top: -6px;
