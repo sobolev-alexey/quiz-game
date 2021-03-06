@@ -8,7 +8,7 @@ Your score will be shown in the end and you can share your results with  friends
 
 ---
 
-### Prerequisites
+## Prerequisites
 
 NodeJS v.14 or newer and Yarn are required.  
   
@@ -17,7 +17,7 @@ Install NodeJS [here](https://nodejs.dev/).
 Install Yarn [here](https://classic.yarnpkg.com/en/docs/install/#mac-stable).  
 
 
-### Install Packages
+## Install Packages
 
 Run this command in the projects' root folder.  
 ```
