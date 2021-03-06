@@ -1,8 +1,26 @@
+@import '~sass-mq';
+
+#root {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  @include mq($until: desktop) {
+    justify-content: center;
+  }
+}
+
 .app-wrapper {
   position: relative;
   max-width: 600px;
   width: 60%;
   min-height: 450px;
+
+  @include mq($until: desktop) {
+    width: 100%;
+  }
 
   & > .ant-spin-spinning, 
   & > .restart {
