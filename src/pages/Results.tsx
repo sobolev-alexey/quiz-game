@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
+import { Typography } from 'antd';
 import { AppContext } from '../context/globalState';
 import { Collapsible, Layout, NewGame, Progress, Share } from '../components';
 import { ResultsInterface } from '../models/context';
+
+const { Title } = Typography;
 
 const Results = () => {
   const { results }: { results: ResultsInterface[] } = useContext(AppContext);
@@ -17,9 +20,9 @@ const Results = () => {
       {results?.length !== 0 ? (
         <div className="results-wrapper">
           <Progress />
-          <h1>
+          <Title level={2}>
             You scored: <span>{getFinalResult()}</span>
-          </h1>
+          </Title>
 
           <Collapsible results={results} />
           <div className="cta-wrapper">
