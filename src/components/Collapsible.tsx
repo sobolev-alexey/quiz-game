@@ -19,13 +19,14 @@ const Collapsible = ({ results }: { results: ResultsInterface[] }) => {
         expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
       >
         {
-          results?.map(({ question, answer, correct, isAnsweredCorrectly }, index) => (
+          results?.map(({ question, answer, correct, isAnsweredCorrectly, duration }, index) => (
             <Collapse.Panel header={getHeader(sanitizeHtml(question), isAnsweredCorrectly)} key={index}>
               <div>
                 <p>
                   You answered {isAnsweredCorrectly ? ' correctly' : ' incorrectly'}: {answer}
                 </p>
                 {!isAnsweredCorrectly && <p>Correct answer: {correct}</p>}
+                {duration && <p>Answer duration: {duration}</p>}
               </div>
             </Collapse.Panel>
           ))
