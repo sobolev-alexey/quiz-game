@@ -1,5 +1,9 @@
 # Quiz Game challenge
 
+Play online [here](https://quiz.lexer.dev/)  
+  
+---  
+    
 This project is built with TypeScript using [React](https://github.com/facebook/react/), [Sass](https://sass-lang.com/), and [Ant Components Library](https://ant.design/components/overview/).
 
 10 random questions are loaded every time you start the game, varying in difficulty levels.
