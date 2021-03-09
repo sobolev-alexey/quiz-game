@@ -14,7 +14,7 @@ const Question = (
     return (
         <div className="question-wrapper">
             <div className="question-category">
-                <Title level={3}>
+                <Title level={3} className="heading">
                     {decodeURI(categoryTitle)}
                 </Title>
             </div>
