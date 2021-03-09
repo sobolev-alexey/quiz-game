@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/globalState';
 import { AppContextInterface } from '../models/context';
+import getDuration from '../utils/timer';
 
 const CallToAction = ({ text }: { text: string }) => {
     let history = useHistory();
@@ -13,18 +14,23 @@ const CallToAction = ({ text }: { text: string }) => {
         setResults,
     }: AppContextInterface = useContext(AppContext);
 
+    const timerStartTime = new Date().getTime();
+
     const nextQuestion = () => {
         if (currentQuestion < data?.results.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
         }
 
+        const duration = getDuration(timerStartTime);
+        
         setResults([
             ...results,
             {
                 answer: text,
                 question: data?.results[currentQuestion]?.question,
                 correct: data?.results[currentQuestion]?.correct_answer,
-                isAnsweredCorrectly: text === data?.results[currentQuestion]?.correct_answer
+                isAnsweredCorrectly: text === data?.results[currentQuestion]?.correct_answer,
+                duration
             },
         ]);
         if (currentQuestion === data?.results.length - 1) {
