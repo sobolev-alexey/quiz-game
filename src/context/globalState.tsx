@@ -8,20 +8,21 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 	const [loading, setLoading] = useState(true);
 	const [results, setResults] = useState([]);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [difficulty, setDifficulty] = useState('');
 
 	useEffect(() => {
 		try {
 			const onNewGame = async () => {
 				setLoading(true);
-				fetch('https://opentdb.com/api.php?amount=10&type=boolean')
-				.then((res) => res.json())
-				.then((data) => {
-					setData(data);
-					setLoading(false);
-					setNewGame(false);
-					setResults([]);
-					setCurrentQuestion(0);
-				});
+				fetch(`https://opentdb.com/api.php?amount=10&type=boolean&difficulty=${difficulty}`)
+					.then((res) => res.json())
+					.then((data) => {
+						setData(data);
+						setLoading(false);
+						setNewGame(false);
+						setResults([]);
+						setCurrentQuestion(0);
+					});
             }
 
 			newGame && onNewGame();
@@ -29,7 +30,7 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 			console.error(error);
 		}
 
-	}, [newGame]);
+	}, [newGame, difficulty]);
 
 	return (
 		<AppContext.Provider value={{
@@ -37,9 +38,11 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 			results,
 			loading,
 			currentQuestion,
+			difficulty,
 			setCurrentQuestion,
 			setResults,
-			setNewGame
+			setNewGame,
+			setDifficulty
 		}}>
 			{children}
 		</AppContext.Provider>
