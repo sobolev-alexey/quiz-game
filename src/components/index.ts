@@ -1,6 +1,7 @@
 import CallToAction from './CallToAction';
 import Collapsible from './Collapsible';
 import Difficulty from './Difficulty';
+import DifficultySelector from './DifficultySelector';
 import Footer from './Footer';
 import Layout from './Layout';
 import NewGame from './NewGame';
@@ -12,6 +13,7 @@ export {
     CallToAction, 
     Collapsible, 
     Difficulty,
+    DifficultySelector,
     Footer,
     Layout, 
     NewGame, 
