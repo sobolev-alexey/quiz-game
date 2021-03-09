@@ -14,15 +14,13 @@ const CallToAction = ({ text }: { text: string }) => {
         setResults,
     }: AppContextInterface = useContext(AppContext);
 
-    const timerStartTime = new Date().getTime();
+    const startTime = new Date().getTime();
 
     const nextQuestion = () => {
         if (currentQuestion < data?.results.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
         }
 
-        const duration = getDuration(timerStartTime);
-        
         setResults([
             ...results,
             {
@@ -30,7 +28,7 @@ const CallToAction = ({ text }: { text: string }) => {
                 question: data?.results[currentQuestion]?.question,
                 correct: data?.results[currentQuestion]?.correct_answer,
                 isAnsweredCorrectly: text === data?.results[currentQuestion]?.correct_answer,
-                duration
+                duration: getDuration(startTime)
             },
         ]);
         if (currentQuestion === data?.results.length - 1) {
