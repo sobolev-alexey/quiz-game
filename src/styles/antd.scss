@@ -31,7 +31,7 @@
 
 .ant-collapse {
   .ant-collapse-header {
-    font-family: 'Metropolis';
+    font-family: 'Metropolis', 'Open Sans', -apple-system, sans-serif;
     font-weight: 600;
     font-size: 16px;
     
@@ -45,10 +45,47 @@
   
   .ant-collapse-content-box {
     p {
-      color: $secondary-color;
+      color: $base-color;
       font-weight: 500;
       font-size: 15px;
       margin: 0 0 5px 24px;
+    }
+  }
+
+  &.ant-collapse-borderless {
+    background-color: unset;
+  }
+
+  & > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    color: $base-color-2;
+  }
+
+  .ant-collapse-header .ant-collapse-arrow {
+    color: $base-color-2;
+  }
+}
+
+.ant-select {
+  .ant-select-selector {
+    background-color: unset;
+    outline: none;
+  }
+
+  .ant-select-selection-item {
+    font-weight: 600;
+  }
+
+  .ant-select-arrow {
+    color: $base-color-2;
+    top: 50%;
+    right: 25px;
+  }
+}
+
+.ant-select-dropdown {
+  .ant-select-item-option-content {
+    .difficulty-level {
+      color: $heading-color;
     }
   }
 }
