@@ -10,6 +10,13 @@
   background-color: $button-color;
 }
 
+.ant-popover-inner-content {
+  & > .tooltip {
+    color: $secondary-color;
+    font-weight: 600;
+  }
+}
+
 .ant-progress {
   .ant-progress-text {
     color: $base-color;

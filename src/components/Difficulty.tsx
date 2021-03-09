@@ -4,9 +4,15 @@ import { Popover, Typography } from 'antd';
 const { Paragraph } = Typography;
 
 const Difficulty = ({ difficulty }: { difficulty: string }) => {
+    const popup = (
+        <span className="tooltip">
+            Difficulty: <strong>{difficulty}</strong>
+        </span>
+    );
+    
     return (
         <Popover
-            content={<span>Difficulty: <strong>{difficulty}</strong></span>}
+            content={popup}
             placement='right'
             trigger={['click', 'hover', 'focus']}
             className="difficulty-wrapper"
