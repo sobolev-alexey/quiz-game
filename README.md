@@ -4,7 +4,9 @@ This project is built with TypeScript using [React](https://github.com/facebook/
 
 10 random questions are loaded every time you start the game, varying in difficulty levels.
 
-Your score will be shown in the end and you can share your results with  friends.
+The difficulty level can be adjusted from the dropdown on the top right of the screen.
+
+Your score, list of the questions, correct answer and answer time duration will be shown at the end and you can share your results with  friends.
 
 ---
 
