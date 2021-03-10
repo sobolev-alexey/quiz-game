@@ -64,7 +64,7 @@ yarn deploy
 
 Attribution [requirement](https://support.freepik.com/hc/en-us/articles/208976585-Attribution-How-when-and-where-)
 
-Images designed by [Freepik](www.freepik.com)
+Images designed by [Freepik](https://www.freepik.com)
 
 Background [image source](https://www.freepik.com/free-photo/yellow-rectangular-wooden-box-drawn-face-outline-with-chalk-blackboard_2810400.htm#page=1&query=quiz&position=22)  
 
