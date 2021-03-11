@@ -16,6 +16,7 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 
 	useEffect(() => {
 		try {
+			// Generate public/private key to encrypt questions
 			const keys: IKeys = generateKeys();
 			setKeys(keys);
 		} catch (error) {
@@ -28,8 +29,13 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 			const onNewGame = async () => {
 				setLoading(true);
 
+				// Communicate public key to the proxy service, it will be used to encrypt questions
+				// so that questions and answers are never sent in plain text over the network
 				const payload = { difficulty, key: keys?.publicKey };
 
+				// Private key will be used to decrypt questions on the client side
+				// Private key is never exposed, logged or stored
+				// it is held in memory for the duration of the game session
 				const results = await callApi(payload, keys?.privateKey);
 				if (results) {
 					setData({ results });
@@ -40,6 +46,7 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 				}	
             }
 
+			// Request new questions after keys were generated 
 			keys?.publicKey && newGame && onNewGame();
 		} catch (error) {
 			console.error(error);
