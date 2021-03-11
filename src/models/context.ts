@@ -29,3 +29,12 @@ export interface AppContextInterface {
 	setDifficulty: (value: string) => void,
 
 }
+
+export interface IKeys { 
+    publicKey: string; 
+    privateKey: string;
+}
+
+export interface IPayload { 
+    results: any; 
+}
