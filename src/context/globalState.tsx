@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, ReactNode } from 'react';
-import axios from 'axios';
-import { generateKeys, privateDecrypt } from '../utils/encryption';
+import { generateKeys } from '../utils/encryption';
+import callApi from '../utils/callApi';
 import { IKeys } from '../models/context';
 
 export const AppContext = createContext<any>({})
@@ -28,18 +28,10 @@ const GlobalState = ({ children }: { children: ReactNode }) => {
 			const onNewGame = async () => {
 				setLoading(true);
 
-				const headers = {
-					"Content-Type": "application/json"
-				};
-				const url = 'https://us-central1-quiz-game-challenge.cloudfunctions.net/quiz';
-				const payload = {
-					difficulty,
-					key: keys?.publicKey || '',
-				}
-				const response = await axios.post(url, payload, { headers });
-				if (response?.data) {
-					const decrypted = privateDecrypt(keys?.privateKey || '', response?.data?.encrypted);
-					const results = decrypted?.results;
+				const payload = { difficulty, key: keys?.publicKey };
+
+				const results = await callApi(payload, keys?.privateKey);
+				if (results) {
 					setData({ results });
 					setLoading(false);
 					setNewGame(false);
