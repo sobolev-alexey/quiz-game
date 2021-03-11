@@ -12,7 +12,7 @@
 
 body {
   position: relative; 
-  height: 100vh;
+  height: 100%;
   width: 100%;
   line-height: 1;
   display: flex;
@@ -25,16 +25,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.55);
-  }
-
   @include mq($until: desktop) {
     background-position-x: center;
   }
@@ -45,6 +35,5 @@ body {
 
   @include mq($until: mobile) {
     align-items: flex-start;
-    height: auto;
   }
 }
