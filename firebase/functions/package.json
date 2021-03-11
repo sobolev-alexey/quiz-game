@@ -1,0 +1,24 @@
+{
+  "name": "backend-encryption-proxy",
+  "scripts": {
+    "shell": "firebase functions:shell",
+    "start": "yarn shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "src/index.js",
+  "author": {
+    "name": "Alexey Sobolev",
+    "website": "https://lexer.dev"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "firebase-admin": "^9.5.0",
+    "firebase-functions": "^3.13.2",
+    "node-rsa": "^1.1.1"
+  },
+  "engines": {
+    "node": "12"
+  }
+}
