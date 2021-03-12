@@ -1,4 +1,4 @@
-# Quiz Game challenge
+# Quiz Game
 
 Play online [here](https://quiz.lexer.dev/)  
   
