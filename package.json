@@ -17,8 +17,8 @@
     "react-scripts": "^4.0.3",
     "sanitize-html": "^2.3.2",
     "sass-mq": "^5.0.1",
-    "typescript": "^4.2.2",
     "web-vitals": "^1.1.0",
+    "typescript": "^4.4.3",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -44,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^14.14.31",
+    "@types/node": "^16.10.2",
     "@types/node-rsa": "^1.1.0",
     "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
